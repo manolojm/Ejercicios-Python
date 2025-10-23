@@ -1,0 +1,18 @@
+# 20_Cadenas
+
+# 20. Realiza un programa que pinte un triángulo hueco
+# tal como se muestra en los ejemplos. El usuario debe
+# introducir la altura de la figura.
+
+n = int(input("Introduzca la altura del triangulo: "))
+print()
+
+cadena = "*"
+numero_asteriscos = n
+
+for i in range(0, n):
+    if i == 0 or i == n-1:
+        print(f'{cadena * numero_asteriscos:<50}')
+    else:
+        print(f'{cadena + " " * (numero_asteriscos-2) + cadena:<50}')
+    numero_asteriscos -= 1
